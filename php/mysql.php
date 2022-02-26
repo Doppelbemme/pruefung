@@ -2,10 +2,10 @@
 $host = "localhost";
 $name = "prüfung";
 $user = "root";
-$passwort = "";
+$password = "";
 
 try{
-    $mysql = new PDO("mysql:host=$host;dbname=$name", $user, $passwort);
+    $mysql = new PDO("mysql:host=$host;dbname=$name", $user, $password);
 } catch (PDOException $exc){
     echo "SQL Error: ".$exc->getMessage();
 }
@@ -16,8 +16,7 @@ $statement = $mysql->prepare("CREATE TABLE IF NOT EXISTS user(
                             LASTNAME VARCHAR(255),
                             EMAIL VARCHAR(255),
                             PASSWORD VARCHAR(255),
-                            REG_DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                            LOG_DATE TIMESTAMP)");
+                            REG_DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
 $statement->execute();
 
 /*
