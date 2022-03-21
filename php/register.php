@@ -29,6 +29,6 @@ $statement->bindParam(":MAIL", $mail);
 $statement->bindParam(":PASSWORD", $password_hashed);
 $statement->execute();
 
-//header("Location: ../index.php?regback=success");
+header("Location: ../index.php?regback=success");
 exit();
 ?>

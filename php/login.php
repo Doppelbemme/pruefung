@@ -28,6 +28,6 @@ if(!password_verify($saltedPassword, $row['PASSWORD'])){
 session_start();
 $uid = $row['UID'];
 $_SESSION["UID"] = $uid;
-header("Location: ../index.php?logback=success");
+header("Location: ../dashboard.php");
 exit();
 ?>  

@@ -1,14 +1,9 @@
-#Prüfungsvorbereitung
+#Dashboard
 
-##Landing Page (Not logged in)
+##Navbar
+-Name (klickbar mit backlink zum dashboard)
 
--Hero Section
--Footer
-
-#Hero Section
-
--Left: Site Name
--Right: Login Window
-
--->Login Window
--input email, password, login button, divider, registration button
+-Kontroll Bereich (Icons)
+    -Account Icon (Weiterleitung auf Account Page)
+    -Settings Icon (Weiterleitung auf Settings Page)
+    -Logout Button (Weiterleitung auf Logout Seite)

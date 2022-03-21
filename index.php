@@ -1,4 +1,11 @@
 <?php
+ob_start();
+session_start();
+if(isset($_SESSION["UID"])){
+    header("Location: dashboard.php");
+    exit;
+}
+
 if (isset($_GET['logback'])) {
     $loginFeedback = $_GET['logback'];
 } else {
@@ -50,7 +57,7 @@ if (isset($_GET['regback'])) {
         <a href="#" class="btn btn--big register-btn" id="open-register-popup">Konto erstellen</a>
     </form>
 </div>
-<div class="registration-popup-box">
+<div class="popup-box">
     <div class="registration-popup">
         <div class="registration-popup-header">
             <i class="fa-solid fa-xmark fa-xl btn-popup-close" id="close-register-popup"></i>
@@ -70,6 +77,16 @@ if (isset($_GET['regback'])) {
             ?>
             <input type="submit" class="btn register-submit-btn" value="Registrieren">
         </form>
+    </div>
+    <div class="success-popup slide-in-top">
+        <div class="success-popup-header">
+            <i class="fa-regular fa-circle-check"></i>
+            <h1 class="header-one">Erfolg</h1>
+        </div>
+        <div class="success-popup-content">
+            <p class="paragraph-one">Dein Account wurde <br> erfolgreich erstellt.</p>
+            <button id="close-success-button" class="btn register-submit-btn btn--big">Okay</button>
+        </div>
     </div>
 </div>
 
