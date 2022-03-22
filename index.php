@@ -33,14 +33,6 @@ if (isset($_GET['regback'])) {
     <title>Prüfungsvorbereitung</title>
 </head>
 <body>
-<div class="loader-box">
-    <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
 <div class="hero">
     <div class="hero-title">
         <h1 class="title-one">Prüfungsvorbereitung</h1>
