@@ -61,3 +61,10 @@
                 Starten
             </button>
         </div>
+
+
+        #questionstatus:
+
+        0 - unsolved
+        1 - correct
+        2 - error

@@ -85,10 +85,67 @@ content =   '<div class="question-box quiz-active quiz-remove">' +
             '</div>'
 
 $('#quiz-start').click(function (evt) { 
-    console.log("Success");
-    $('.quiz-remove').remove();
-    $('.main-box').append(content);
     evt.preventDefault();
+});
+
+$('#answer-1').click(function (evt) { 
+    if($('#answer-1').is('[disabled=disabled]')){
+        return;
+    }
+
+    console.log("Pass");
+
+    if($('#answer-2').is('[disabled=disabled]') == false && $('#answer-3').is('[disabled=disabled]') == false){
+        $('#answer-2').attr("disabled", true);
+        $('#answer-3').attr("disabled", true);
+        $('#answer-submit').attr("disabled", false);
+        $('#answer-submit').removeClass('btn-inactive');
+    }else{
+        $('#answer-2').attr("disabled", false);
+        $('#answer-3').attr("disabled", false);
+        $('#answer-submit').attr("disabled", true);
+        $('#answer-submit').addClass('btn-inactive');
+    }
+});
+
+$('#answer-2').click(function (evt) { 
+    if($('#answer-2').is('[disabled=disabled]')){
+        return;
+    }
+
+    console.log("Pass");
+
+    if($('#answer-1').is('[disabled=disabled]') == false && $('#answer-3').is('[disabled=disabled]') == false){
+        $('#answer-1').attr("disabled", true);
+        $('#answer-3').attr("disabled", true);
+        $('#answer-submit').attr("disabled", false);
+        $('#answer-submit').removeClass('btn-inactive');
+    }else{
+        $('#answer-1').attr("disabled", false);
+        $('#answer-3').attr("disabled", false);
+        $('#answer-submit').attr("disabled", true);
+        $('#answer-submit').addClass('btn-inactive');
+    }
+});
+
+$('#answer-3').click(function (evt) { 
+    if($('#answer-3').is('[disabled=disabled]')){
+        return;
+    }
+
+    console.log("Pass");
+
+    if($('#answer-2').is('[disabled=disabled]') == false && $('#answer-1').is('[disabled=disabled]') == false){
+        $('#answer-2').attr("disabled", true);
+        $('#answer-1').attr("disabled", true);
+        $('#answer-submit').attr("disabled", false);
+        $('#answer-submit').removeClass('btn-inactive');
+    }else{
+        $('#answer-2').attr("disabled", false);
+        $('#answer-1').attr("disabled", false);
+        $('#answer-submit').attr("disabled", true);
+        $('#answer-submit').addClass('btn-inactive');
+    }
 });
 
 function getValue(argument){

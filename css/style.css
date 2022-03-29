@@ -527,6 +527,7 @@ Loader
 
 .question-answer-submit{
     margin-top: 24px;
+    padding: 12px 96px !important;
 }
 
 .question-answer-submit:hover{

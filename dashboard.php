@@ -50,10 +50,10 @@
     </nav>
     <main class="main-box">
         <div class="question-box quiz-remove">
-            <button class="btn btn--big register-btn quiz-start-btn quiz-remove" id="quiz-start">
+            <a href="http://100.115.92.196/prüfung/question.php?questionid=1" class="btn btn--big register-btn quiz-start-btn quiz-remove">
                 <i class="fa-solid fa-play item-play"></i>
                 Starten
-            </button>
+            </a>
         </div>
     </main>
 
