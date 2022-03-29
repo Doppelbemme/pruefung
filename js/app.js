@@ -10,14 +10,14 @@ $(document).ready(function () {
     if(url.includes("regback=success")){
         $('.popup-box').fadeIn();
         $('.success-popup').show();
-    }
-    
-    if(url.includes("regback")){
+    }else if(url.includes("regback=mail")){
+        console.log("mail regback");
         var urlSplit = url.split('&');
         $('#register-surname').val(getValue(urlSplit[1]));
         $('#register-lastname').val(getValue(urlSplit[2]));
         $('#register-email').val(getValue(urlSplit[3]));
         $('.popup-box').fadeIn();
+        $('.registration-popup').show();
     }
 });
 
@@ -58,6 +58,36 @@ $('#open-register-popup').click(function (evt) {
     $('.popup-box').fadeIn();
     $('.registration-popup').show();
 
+    evt.preventDefault();
+});
+
+content =   '<div class="question-box quiz-active quiz-remove">' +
+                '<div class="question-box-header">' +  
+                    '<h2>Der Großhandelsbetrieb ist das Bindeglied für?</h2>' +
+                '</div>' + 
+                '<div class="question-box-content">' +
+                    '<form class="question-answer">' +
+                        '<div class="question-answer-box">' +
+                            '<input class="question-answer-input" type="checkbox" name="answer-1">' +
+                            '<label class="question-answer-label" for="answer-1">Erzeuger & Verbraucher</label>' +
+                        '</div>' +
+                        '<div class="question-answer-box">' +
+                            '<input class="question-answer-input" type="checkbox" name="answer-2">' +
+                            '<label class="question-answer-label" for="answer-2">Staat & Bürger</label>' +
+                        '</div>' +
+                        '<div class="question-answer-box">' +
+                            '<input class="question-answer-input" type="checkbox" name="answer-3">' +
+                            '<label class="question-answer-label" for="answer-3">Staat & Staaten</label>' +
+                        '</div>' +
+                    '<input class="question-answer-submit btn btn--big register-btn btn-inactive" type="submit" value="Weiter">' +
+                '</form>' + 
+                '</div>' +
+            '</div>'
+
+$('#quiz-start').click(function (evt) { 
+    console.log("Success");
+    $('.quiz-remove').remove();
+    $('.main-box').append(content);
     evt.preventDefault();
 });
 

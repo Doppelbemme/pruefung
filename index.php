@@ -77,7 +77,7 @@ if (isset($_GET['regback'])) {
         </div>
         <div class="success-popup-content">
             <p class="paragraph-one">Dein Account wurde <br> erfolgreich erstellt.</p>
-            <button id="close-success-button" class="btn register-submit-btn btn--big">Okay</button>
+            <button id="close-success-button" class="btn register-submit-btn register-btn">Okay</button>
         </div>
     </div>
 </div>

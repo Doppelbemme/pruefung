@@ -48,6 +48,7 @@ body{
     font-family: 'Inter', sans-serif;
     line-height: 1;
     font-weight: 400;
+    height: 100vh;
 }
 
 .hero{
@@ -392,6 +393,8 @@ Loader
     justify-content: space-around;
     align-items: center;
     gap: 70vw;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    z-index: 9;
 }
 
 .navbar-header{
@@ -435,6 +438,107 @@ Loader
     transform: scale(1.15);
 }
 
+.main-box{
+    background-color: #f1f3f5;
+    width: 100vw;
+    height: calc(100vh - 48px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-play{
+    margin-right: 10px;
+}
+
 .question-box{
-    background-color: lime;
+    background-color: #fff;
+    height: 500px;
+    width: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 2px solid #555;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.quiz-active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.question-box-header{
+    height: 15%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #555;
+}
+
+.question-box-content{
+    height: 85%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-start-btn{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.quiz-start-btn:hover{
+    transform: scale(0.95);
+}
+
+.question-answer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.question-answer-input{
+    transform: scale(2.5);
+}
+
+.question-answer-label{
+    display: inline-block;
+    text-align: left;
+    margin-left: 24px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.question-answer-box{
+    margin-left: 100px;
+}
+
+.question-answer-submit{
+    margin-top: 24px;
+}
+
+.question-answer-submit:hover{
+    transform: scale(0.95);
+}
+
+.btn-inactive{
+    background-color: #b3e2aa;
+    cursor: not-allowed;
+}
+
+.btn-inactive:hover{
+    background-color: #b3e2aa;
+    transform: scale(1);
 }

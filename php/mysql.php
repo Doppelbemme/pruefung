@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$name = "prüfung";
+$name = "exams";
 $user = "root";
 $password = "";
 
