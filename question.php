@@ -63,7 +63,7 @@
                 <h3><?php echo $questionHeader ?></h3>
             </div> 
             <div class="question-box-content">
-                <form class="question-answer" method="post" action="php/submitQuestion.php">
+                <form class="question-answer" method="post" action="submitQuestion.php">
                     <div class="question-answer-box">
                         <input class="question-answer-input" type="checkbox" name="answer" id="answer-1" value="1">
                         <label class="question-answer-label" for="answer-1"><?php echo $answerOne ?></label>

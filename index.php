@@ -81,7 +81,10 @@ if (isset($_GET['regback'])) {
         </div>
     </div>
 </div>
-
+<div class="cookie-box" id="cookie-box">
+    <p class="cookie-text">Diese Website nutzt Cookies, um bestmögliche Funktionalität bieten zu können. Die gespeicherten Cookies können <a class="cookie-link" href="http://domain.de/php/showCookies.php">hier</a> eingesehen werden. 🍪</p>
+    <button class="cookie-btn" id="cookie-button">Okay</button> 
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/app.js"></script>
 </body>

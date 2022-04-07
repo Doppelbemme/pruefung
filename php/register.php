@@ -7,6 +7,8 @@ $lastname = $_POST["register-lastname"];
 $mail = $_POST["register-email"];
 $password = $_POST["register-password"];
 $saltedPassword = $mail . $password;
+$answersRight = 0;
+$answersWrong = 0;
 
 //TODO: Hash password
 $password_hashed = password_hash($saltedPassword, PASSWORD_BCRYPT);
@@ -22,11 +24,13 @@ if($mailCount != 0){
     exit();
 }
 
-$statement = $mysql->prepare("INSERT INTO user (SURNAME,LASTNAME,EMAIL,PASSWORD) VALUES (:SURNAME,:LASTNAME,:MAIL,:PASSWORD)");
+$statement = $mysql->prepare("INSERT INTO user (SURNAME,LASTNAME,EMAIL,PASSWORD,ANSWERS_RIGHT,ANSWERS_WRONG) VALUES (:SURNAME,:LASTNAME,:MAIL,:PASSWORD,:ANSWERS_RIGHT,:ANSWERS_WRONG)");
 $statement->bindParam(":SURNAME", $surname);
 $statement->bindParam(":LASTNAME", $lastname);
 $statement->bindParam(":MAIL", $mail);
 $statement->bindParam(":PASSWORD", $password_hashed);
+$statement->bindParam(":ANSWERS_RIGHT", $answersRight);
+$statement->bindParam(":ANSWERS_WRONG", $answersWrong);
 $statement->execute();
 
 header("Location: ../index.php?regback=success");

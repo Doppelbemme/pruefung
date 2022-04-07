@@ -16,6 +16,8 @@ $statement = $mysql->prepare("CREATE TABLE IF NOT EXISTS user(
                             LASTNAME VARCHAR(255),
                             EMAIL VARCHAR(255),
                             PASSWORD VARCHAR(255),
+                            ANSWERS_RIGHT INT(3),
+                            ANSWERS_WRONG INT (3),
                             REG_DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
 $statement->execute();
 

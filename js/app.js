@@ -4,9 +4,14 @@ $(document).ready(function () {
     $('.success-popup').hide();
     $('.registration-popup')
     $('.loader-box').fadeOut(250);
+    let cookieConsent = localStorage.getItem("cookie-consent");
+    if(cookieConsent == "accepted"){
+        $('#cookie-box').hide();
+    }
     $('.hero').fadeIn();
 
     var url = window.location.href;
+
     if(url.includes("regback=success")){
         $('.popup-box').fadeIn();
         $('.success-popup').show();
@@ -146,6 +151,12 @@ $('#answer-3').click(function (evt) {
         $('#answer-submit').attr("disabled", true);
         $('#answer-submit').addClass('btn-inactive');
     }
+});
+
+$('#cookie-button').click(function (evt) { 
+    localStorage.setItem("cookie-consent", "accepted");
+    $('#cookie-box').fadeOut();
+    evt.preventDefault();
 });
 
 function getValue(argument){
