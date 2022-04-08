@@ -1,24 +1,24 @@
 <?php
-ob_start();
-session_start();
-if(isset($_SESSION["UID"])){
-    header("Location: dashboard.php");
-    exit;
-}
+    ob_start();
+    session_start();
+    
+    if(isset($_SESSION["UID"])){
+        header("Location: dashboard.php");
+        exit;
+    }
 
-if (isset($_GET['logback'])) {
-    $loginFeedback = $_GET['logback'];
-} else {
-    $loginFeedback = "empty";
-}
+    if(isset($_GET['logback'])) {
+        $loginFeedback = $_GET['logback'];
+    }else{
+        $loginFeedback = "empty";
+    }
 
-if (isset($_GET['regback'])) {
-    $registerFeedback = $_GET['regback'];
-} else {
-    $registerFeedback = "empty";
-}
+    if(isset($_GET['regback'])) {
+        $registerFeedback = $_GET['regback'];
+    }else{
+        $registerFeedback = "empty";
+    }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@ if (isset($_GET['regback'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/467cba3d21.js" crossorigin="anonymous"></script>
-    <title>Prüfungsvorbereitung</title>
+    <title>Prüfung</title>
 </head>
 <body>
 <div class="hero">
