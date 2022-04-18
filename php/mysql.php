@@ -21,12 +21,12 @@ $statement = $mysql->prepare("CREATE TABLE IF NOT EXISTS user(
                             REG_DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP)");
 $statement->execute();
 
-/*
-$statement = $mysql->prepare("CREATE TABLE IF NOT EXISTS password(
-                            EMAIL VARCHAR(255),
-                            RESETKEY VARCHAR(255),
-                            request_date TIMESTAMP DEFAULT,
-                            expiration_date TIMESTAMP)");
-$statement->execute();
-*/
+$statement = $mysql->prepare("CREATE TABLE IF NOT EXISTS question(
+                            ID INT(9) AUTO_INCREMENT PRIMARY KEY,
+                            QUESTION VARCHAR(255),
+                            ANSWER_1 VARCHAR(255),
+                            ANSWER_2 VARCHAR(255),
+                            ANSWER_3 VARCHAR(255),
+                            ANSWER_CORRECT INT(1))");
+$statement->execute();  
 ?>
