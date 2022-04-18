@@ -12,7 +12,7 @@
     $answerOne = $row['ANSWER_1'];
     $answerTwo = $row['ANSWER_2'];
     $answerThree = $row['ANSWER_3'];
-    $correctAnswer = $row['ANSWER_CORRECT']
+    $correctAnswer = $row['ANSWER_CORRECT'];
 
     include("includes/head.php");
     include("includes/loader.php");
@@ -22,7 +22,7 @@
 <main class="main-box">
     <div class="question-box quiz-active quiz-remove">
         <div class="question-box-header">  
-            <h3><?php echo $questionHeader ?></h3>
+            <h3><?php echo $questionHeader." ($questionID / 50)" ?></h3>
         </div> 
         <div class="question-box-content">
             <form class="question-answer" method="post" action="submitQuestion.php">
